@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Micro project 2 - Dapper</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=DM+Sans&family=Roboto:wght@700&display=swap" rel="stylesheet">
+   
+    <style>
+        body{
+           padding-left: 30px;
+            box-sizing: border-box;
+            padding-top: 100px;
+            font-family: 'DM Sans', sans-serif;
+            padding-right: 30px;
+            
+        }
+        .left-container{
+            
+            display: flex;
+            flex-direction: column;
+            background-color:rgba(72, 62, 255, 1);
+            height: 25rem;
+            left: 2rem;
+            top: 2rem;
+            position: absolute;
+            
+        }
+        .div1{
+            background: rgba(188, 224, 246, 1);
+            width: 20vw;
+            height: 60px;
+            margin-bottom: 20px;
+            margin-top: 20px;
+            border: 3px solid rgba(188, 224, 246, 1);;
+            padding: 10px;
+            display: flex;
+            border-radius: 10px;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            font-family: Roboto, Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            
+            
+        }
+        .main-container1{
+            display: flex;
+            background-color:rgba(72, 62, 255, 1);
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 5rem;
+            margin-bottom: 2rem;
+            position: relative;
+            height: 25rem;
+
+        }
+        .right-container{
+            
+            display: flex;
+            flex-direction: column;
+            padding: 10px;
+            background-color: white;
+            border-radius: 10px;
+            margin-left: 2rem;
+            right: 2rem;
+            position: absolute;
+            top: 2rem;
+            left: 20rem;
+            height: 22.5rem;
+
+        }
+        .info1{
+            padding: 30px;
+            color: rgba(4, 40, 90, 1);
+            font-weight: 700;
+            font-family: Arial, Helvetica, sans-serif;
+            letter-spacing: 1.5px;
+            font-size: 20px;
+        }
+        .table{
+            font-family: Arial, Helvetica, sans-serif;
+            padding-left: 50px;
+            line-height: 2;       
+        }
+        table td
+        {
+            width:20px;
+            white-space: nowrap;
+            color: rgba(20, 53, 101, 1);
+            
+        }
+        table th{
+            column-width: 60px;
+            text-align: left;
+            color:rgba(4, 40, 90, 1);
+        }
+        .next-button-container{
+            display: flex;
+            justify-content: flex-end; 
+            position: relative;
+            
+        }
+        .next-button{
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            width: 8rem;
+            height:2.8rem ;
+            background-color: black;
+            color: white;
+            font-size: medium;
+            border-radius: 5px;
+            position: absolute;
+            top: 5rem;
+            right: 1rem;
+            padding-left: 30px;
+
+        }
+        .next-button img{
+            height: .8rem;
+            width: 2rem;
+            position: absolute;
+            top: .9rem;
+            left: 4.5rem;
+        }
+        .div2{
+
+            background-color:rgba(72, 62, 255, 1);
+            width: 20vw;
+            height: 60px;
+            margin-bottom: 20px;
+            margin-top: 20px;
+            border: 3px solid white;
+            padding: 10px;
+            display: flex;
+            border-radius: 10px;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            font-family: Roboto, Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            color: white;
+        }
+        .top-container{
+            display: flex;
+            width: 90vw;
+            flex-direction: column;
+            align-items: center; 
+            margin-right: 1rem;
+            
+        }
+        .group1-top{  
+            width: 95vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 6rem;
+            
+        }
+       .group1-top img{
+            max-width: 100%;
+            max-height: 100%;
+        }
+        .group1-text{
+            display: flex;
+            background-color: rgba(229, 216, 255, 1);
+            height: 18.5rem;
+            width: 39rem;
+            padding-left: 2rem;
+            padding-top: 2rem;
+            padding-right: 6rem;
+            margin-right: 1.5rem;
+            
+            
+            border-radius: 10px;
+            font-size: 18px;
+            color:rgba(111, 115, 115, 1);
+            font-family: 'DM Sans';
+            line-height: 2;
+            
+        }
+        .group1-image-container{
+            width: 23rem;
+            height: 23rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-top: 10px;
+        }
+        .group2-top{
+            display: flex;
+            flex-direction: row;
+            margin-bottom: 6rem;
+            position: relative;
+            align-items: stretch;      
+            
+        }
+        .group2-top div{
+            font-family: 'DM Sans';
+            font-size: 16px;
+            font-weight: 700;
+            width: 11rem; 
+            padding: 1rem;
+            height: 4rem;
+            border-radius: .5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            color: white;
+            box-shadow: 0px 9px 31px 0px rgba(0, 0, 0, 0.4);
+            
+        }
+        .group2-top p{
+            margin: .5rem;
+            
+        }
+       
+        .card1{
+            background-color:rgba(146, 157, 255, 1);
+            position: absolute;
+            left: -34.5rem;
+            top: -2rem;  
+            
+        }
+        .card2{
+            background-color:rgba(115, 76, 242, 1);
+            position: absolute;
+            left: -15.5rem;
+            top: -2rem; 
+            
+        }
+        .card3{
+            background-color:rgba(210, 136, 255, 1);
+            position: absolute;
+            left: 3.55rem;
+            top: -2rem; 
+            
+        }
+        .card4{
+            background-color:black;
+            position: absolute;
+            left: 22.5rem;
+            top: -2rem; 
+            
+        }
+        .header{
+            display: flex;
+            flex-direction: row;
+            background-color:rgba(111, 106, 247, 1);
+            align-items: center;
+            position: fixed;
+            top: 0;
+            right: 0;
+            left: 0;
+            height: 60px;
+            z-index: 200;
+        }
+        .navbar{
+            display: flex;
+            flex: 1;
+            flex-direction: row;
+            align-items: center;    
+            justify-content: center;
+        }
+        .navbar div{
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            flex: 1;   
+        }
+        .header div{
+            flex: 1;
+            color:rgba(255, 255, 255, 1);
+            font-family: 'DM Sans', sans-serif;
+            font-size: medium;
+        }
+        .logo{
+            height: 25px;
+            padding-right: 60px;
+            padding-left: 30px;
+        }
+        .searchbar{
+            display: flex;
+            position: relative;
+            align-items: center;
+            justify-content: flex-start;   
+            padding-left: 20px;
+        }
+        .searchbar div {
+            flex: 1;
+        }
+        .searchbar ::placeholder {
+            padding-left: 8px;
+            font-size: small;
+            color:rgba(159, 159, 159, 1);
+        }
+
+        .search-icon-container{
+            position: absolute;
+            right: 10.5rem;
+            top: -.5rem;
+            left: 20rem ;
+        }
+        .hamburger{
+            height: 1.5rem;
+        }
+        .hamburger-container{
+            position: absolute;
+            right: 2rem;
+        }
+        .search-icon{
+            height: 1rem;
+        }
+        .inputbar{
+            position: absolute;
+            left: 2rem;
+            bottom: -1.1rem;
+            height: 2rem;
+            border-radius: 15px;
+            border: none;
+            width: 20rem;
+        }
+        .downarrow{
+            height: 4px;
+            padding-top:4px ;
+            padding-left: 2px;
+            margin: 0;
+        }
+        .more{
+            position: relative;
+        }
+        .downarrow-container{
+            position: absolute;
+            left: 5.2rem;
+            top: .5rem;
+            height: 6px;
+            right: 2rem;
+        
+        }
+        
+    
+        .help-icon{
+            position: relative;
+        }
+        .help-icon-icon {
+            position: fixed;
+            right: 2.65vw;
+            height: 10vh;
+            bottom: 7.5vh;
+            
+        }
+        .help-icon-background {
+            position: fixed;
+            right: 0vw;
+            height: 20vh;
+            bottom: 1vh;
+            
+            
+        }
+
+        .social-media-container{
+            position: sticky;
+            top: 4rem;
+            right: 0;
+            padding-left: 10px;  
+            height: 8rem;
+             
+        }
+        .socialmedia-icons{
+            height: 8rem;
+        }
+        .totalgroup{
+            display: flex;
+              
+        }
+
+    </style>
+    </head>
+    <body>
+        <div class="header">
+            <img class="logo" src="icons/dappr.png" alt="">
+            <div class="navbar">
+                <div>Home</div>
+                <div>About Us</div>
+                <div>Information</div>
+                <div class="more">More
+                    <div class="downarrow-container">
+                    <img class="downarrow" src="icons/down arrow.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="searchbar">
+                <input placeholder="Search...." class="inputbar" type="text">
+                <div class="search-icon-container">
+                    <img class="search-icon" src="icons/search.png" alt="">
+                </div>
+            </div>
+            <div class="hamburger-container"><img class="hamburger" src="icons/Vector.png" alt=""></div>
+        </div>
+        <div class="totalgroup">
+            <div>
+                <div class="top-container">
+                    <div class="group1-top">
+                        <div class="group1-image-container"><img src="icons/Group 1.png" alt=""></div>
+                        <div class="group1-text">It's not only writers who can benefit from this free online tool. If you're a programmer who's working on a ......</div>
+                    </div>
+                    <div class="group2-top">
+                        <div class="card1">
+                            <p>Total Question’s</p>
+                            <p>200,000</p>
+                        </div>
+                        <div class="card2">
+                            <p>Total Answer’s</p>
+                            <p>105,000</p>
+                        </div>
+                        <div class="card3">
+                            <p>Participated</p>
+                            <p>10,000</p>
+                        </div>
+                        <div class="card4">
+                            <p>Total Passed</p>
+                            <p>6,000</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="main-container1">
+                    <div class="left-container">
+                        
+                            <div class="div1">
+                                YOUR INFO
+                            </div>
+                            <div class="div2">
+                                BOOKMARKS
+                            </div>
+                            <div class="div2">
+                                SETTINGS
+                            </div>
+                        </div>
+                    
+                    <div class="right-container">
+                        <div class="info1">YOUR INFORMATION</div>
+                        <div class="table">
+                            <table>
+                                <tr>
+                                    <th>Name</th>
+                                    <td>:</td>
+                                    <td>sathish</td>
+                                </tr>
+                                <tr>
+                                    <th>Email</th>
+                                    <td>:</td>
+                                    <td>satmech213@gmail.com</td>
+                                </tr>
+                                <tr>
+                                    <th>phone</th>
+                                    <td>:</td>
+                                    <td>xxxxxxxxx</td>
+                                </tr>
+                                <tr>
+                                    <th>Marks</th>
+                                    <td>:</td>
+                                    <td>500.00</td>
+                                </tr>
+                            </table>
+                            
+                        </div>
+                        <div class="next-button-container">
+                            <button class="next-button">Next <img class="button-arrow" src="icons/Arrow 1.png" alt=""></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="help-icon">
+                    <img class="help-icon-background" src="icons/Ellipse 1helpicon.png" alt="">
+                    <img class="help-icon-icon" src="icons/Vectorhelp.png" alt=""></div>
+                </div>
+                <!--social media icon-->
+                <div class="social-media-container">
+                    <img class="socialmedia-icons" src="icons/Frame 1.png" alt="">
+                </div>
+            </div>
+        
+            
+        </div>
+    </body>
+</html>
